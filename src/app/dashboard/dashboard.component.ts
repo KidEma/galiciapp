@@ -14,25 +14,49 @@ export class DashboardComponent {
   private card0: DashboardCard = {
     title: "Consumidores de préstamos",   
     subtitle: "",      
-    content: "consumidores con probabilidades de sacar un préstamo",
-    imgSrc: "https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/img/pie-sample.png",
+    content: "Consumidores con probabilidades de sacar un préstamo",
+    imgSrc: "../assets/loans.png",
     redirectTo: "clientescreditos"
   }
   private card1: DashboardCard  =
     {
       title: "Transacciones de riesgo",   
       subtitle: "",      
-      content: "Hay 10 transacciones de riesgo.",
-      imgSrc: "https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/img/pie-sample.png",
+      content: "Transacciones con posibilidades de ser fraudulentas.",
+      imgSrc: "../assets/transactions.png",
       redirectTo: "transaccionesderiesgo"
     }
     private card2: DashboardCard  =
     {
-      title: "Transacciones de riesgo",   
+      title: "Análisis de redes sociales",   
       subtitle: "",      
-      content: "Hay 10 transacciones de riesgo.",
-      imgSrc: "https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/img/pie-sample.png",
+      content: "Detectar grupos de consumidores.",
+      imgSrc: "../assets/twitter-black.jpg",
+      redirectTo: "transaccionesderiesgo"
+    }
+    private card3: DashboardCard  =
+    {
+      title: "Seguridad informática",   
+      subtitle: "",      
+      content: "Detección de patrones poco comunes del usuario.",
+      imgSrc: "../assets/security.png",
       redirectTo: "transaccionesderiesgo"
     }
 
+    private card4: DashboardCard  =
+    {
+      title: "Optimización de Productos",   
+      subtitle: "",      
+      content: "Detección de segmentos no captados.",
+      imgSrc: "../assets/automatic.png",
+      redirectTo: "transaccionesderiesgo"
+    }
+    private card5: DashboardCard  =
+    {
+      title: "Recomendaciones",   
+      subtitle: "",      
+      content: "Motor de recomendaciones automática de productos.",
+      imgSrc: "../assets/recommend.png",
+      redirectTo: "transaccionesderiesgo"
+    }
 }

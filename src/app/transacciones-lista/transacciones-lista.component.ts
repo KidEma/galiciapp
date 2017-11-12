@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Input, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { TransactionDetailComponent } from '../transaction-detail/transaction-detail.component'
+import { RiskyTransaction } from '../risky-transaction'
 
 @Component({
   selector: 'app-transacciones-lista',
@@ -9,7 +10,7 @@ import { TransactionDetailComponent } from '../transaction-detail/transaction-de
   encapsulation: ViewEncapsulation.None
 })
 export class TransaccionesListaComponent implements OnInit {
-  @Input() data: TransaccionRiesgosa
+  @Input() data: RiskyTransaction
   private showInfo: any;
 
   constructor(public dialog: MatDialog) { 
@@ -19,14 +20,8 @@ export class TransaccionesListaComponent implements OnInit {
       });
     }
   }
-
-
   ngOnInit() {
 
   }
-}
-export interface TransaccionRiesgosa {
-  titulo: string,
-  fecha: Date,
 }
 

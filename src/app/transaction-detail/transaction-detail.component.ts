@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import {TransaccionRiesgosa} from '../transacciones-lista/transacciones-lista.component'
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { RiskyTransaction } from '../risky-transaction'
 @Component({
   selector: 'app-transaction-detail',
   templateUrl: './transaction-detail.component.html',
@@ -8,8 +8,8 @@ import {TransaccionRiesgosa} from '../transacciones-lista/transacciones-lista.co
   encapsulation: ViewEncapsulation.None
 })
 export class TransactionDetailComponent implements OnInit {
-//  private data: TransaccionRiesgosa;
-  
+  //  private data: TransaccionRiesgosa;
+
 
   ngOnInit() {
     console.log(this.data);
@@ -17,7 +17,7 @@ export class TransactionDetailComponent implements OnInit {
 
 
   constructor(
-    public dialogRef: MatDialogRef<TransaccionRiesgosa>,
+    public dialogRef: MatDialogRef<RiskyTransaction>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   onNoClick(): void {

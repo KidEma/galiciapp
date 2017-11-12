@@ -38,6 +38,7 @@ import { CreditConsumersComponent } from './credit-consumers/credit-consumers.co
 import { CreditConsumerListComponent } from './credit-consumer-list/credit-consumer-list.component';
 import { ConsumerFormComponent } from './consumer-form/consumer-form.component';
 import { ConsumerFormResultComponent } from './consumer-form-result/consumer-form-result.component';
+import { TransactionFormComponent } from './transaction-form/transaction-form.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { ConsumerFormResultComponent } from './consumer-form-result/consumer-for
     CreditConsumerListComponent,
     ConsumerFormComponent,
     ConsumerFormResultComponent,
+    TransactionFormComponent,
   ],
   imports: [
     BrowserModule,

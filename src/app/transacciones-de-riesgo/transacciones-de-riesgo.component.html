@@ -1,2 +1,7 @@
 <h2 class="mat-h2">Transacciones de riesgo</h2>
 <app-transacciones-lista [data]="listaDeTransacciones"></app-transacciones-lista>
+<div matTooltip="Train!" matTooltipPosition="above" class="fab-button-overlay">
+    <button mat-fab (click)="goToCreditconsumerForm()">
+        <mat-icon aria-label="Example icon-button with a heart icon">train</mat-icon>
+    </button>
+</div>

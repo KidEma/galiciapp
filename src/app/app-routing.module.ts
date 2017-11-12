@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { TransaccionesDeRiesgoComponent } from './transacciones-de-riesgo/transacciones-de-riesgo.component'
 import {CreditConsumersComponent} from './credit-consumers/credit-consumers.component'
 import {ConsumerFormComponent} from './consumer-form/consumer-form.component'
+import {TransactionFormComponent} from './transaction-form/transaction-form.component'
 
 const routes: Routes = [
 {
@@ -14,6 +15,10 @@ const routes: Routes = [
 {
   path: 'transaccionesderiesgo',
   component: TransaccionesDeRiesgoComponent,
+},
+{
+  path: 'transactionform',
+  component: TransactionFormComponent,
 },
 {
   path: 'clientescreditos',

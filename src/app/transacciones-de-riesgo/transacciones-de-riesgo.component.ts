@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { TransaccionRiesgosa } from '../transacciones-lista/transacciones-lista.component'
-
+import { DataService } from '../data.service'
+import { RiskyTransaction } from '../risky-transaction'
+import { Router } from "@angular/router";
 @Component({
   selector: 'app-transacciones-de-riesgo',
   templateUrl: './transacciones-de-riesgo.component.html',
@@ -8,16 +9,23 @@ import { TransaccionRiesgosa } from '../transacciones-lista/transacciones-lista.
   encapsulation: ViewEncapsulation.None
 })
 export class TransaccionesDeRiesgoComponent implements OnInit {
-  private listaDeTransacciones: TransaccionRiesgosa[];
-  constructor() { }
+  private listaDeTransacciones: RiskyTransaction[];
+  private showProgressBar = false;
+  constructor(private router: Router, private dataService: DataService) {
+
+  }
 
   ngOnInit() {
-    this.listaDeTransacciones = [
-      {
-        titulo: "Transacción de riesgo 1",
-        fecha: new Date()
-      }
-    ];
+    this.dataService.getTranfers()
+    .subscribe(data => { this.listaDeTransacciones = data })
+  }
+
+  public goToCreditconsumerForm = () => {
+    this.showProgressBar = true;
+    setTimeout(() => {
+      this.router.navigate(['transactionform']);
+    },
+      5000);
   }
 
 }

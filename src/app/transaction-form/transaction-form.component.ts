@@ -1,20 +1,21 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ConsumerFormResultComponent } from '../consumer-form-result/consumer-form-result.component'
-import { LoanProbabilityForm } from '../loan-probability-form'
+import { TransactionProbabilityForm } from '../transaction-probability-form'
 import { NgForm } from '@angular/forms';
 import { DataService } from '../data.service'
 
 @Component({
-  selector: 'app-consumer-form',
-  templateUrl: './consumer-form.component.html',
-  styleUrls: ['./consumer-form.component.css'],
+  selector: 'app-transaction-form',
+  templateUrl: './transaction-form.component.html',
+  styleUrls: ['./transaction-form.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class ConsumerFormComponent implements OnInit {
+export class TransactionFormComponent implements OnInit {
+
 
   private consultarFactibilidad: any;
-  private form: LoanProbabilityForm;
+  private form: TransactionProbabilityForm;
 
   constructor(public dialog: MatDialog, dataService: DataService) {
     this.consultarFactibilidad = (data) => {
@@ -44,5 +45,4 @@ export class ConsumerFormComponent implements OnInit {
   ngOnInit() {
 
   }
-
 }

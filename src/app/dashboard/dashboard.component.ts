@@ -59,4 +59,12 @@ export class DashboardComponent {
       imgSrc: "../assets/recommend.png",
       redirectTo: "transaccionesderiesgo"
     }
+    private card6: DashboardCard  =
+    {
+      title: "Reconocimiento de imágenes",   
+      subtitle: "",      
+      content: "Comparación de firmas.",
+      imgSrc: "../assets/check.jpg",
+      redirectTo: "transaccionesderiesgo"
+    }
 }

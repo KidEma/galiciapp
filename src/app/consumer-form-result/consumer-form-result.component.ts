@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 @Component({
   selector: 'app-consumer-form-result',
   templateUrl: './consumer-form-result.component.html',
@@ -7,19 +7,23 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
   encapsulation: ViewEncapsulation.None
 })
 export class ConsumerFormResultComponent implements OnInit {
-private probability: string;
+  private probability: string;
 
-constructor(
-  public dialogRef: MatDialogRef<string>,
-  @Inject(MAT_DIALOG_DATA) public data: string) { 
+  constructor(
+    public dialogRef: MatDialogRef<string>,
+    @Inject(MAT_DIALOG_DATA) public data: string) {
   }
 
   ngOnInit() {
-    if (parseInt(this.data) > 0 ) {
-      this.probability = "Sí"
+    console.log(this.data);
+    let value = parseInt(this.data);
+    value = (typeof value === "number" ? value : Math.random())
+    value = Math.ceil(value);
+    if (value <= 0) {
+      this.probability = 'No está interesado en el producto'
     }
-    else this.probability = "No";
-    
+    else this.probability = `Consumirá el producto ${value} veces`;
+
   }
 
 }

@@ -1,0 +1,11 @@
+<mat-list color="primary" class="transacciones-lista">
+    <mat-list-item *ngFor="let client of data">
+      <mat-icon mat-list-icon>person</mat-icon>     
+      <h3 mat-line class="list-title">{{client.id}} - {{client.firstName}} {{ client.lastName}}</h3>
+      <h3 mat-line> {{ client.streetName }} #{{ client.streetNumber }}</h3>
+      <p mat-line> {{ client.state }} ({{ client.zip }})</p>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+
+ 

@@ -1,0 +1,9 @@
+.example-container {
+    display: inline;
+    flex-direction: column;
+  }
+
+  .example-container > * {
+    width: 80%;
+    text-align: center;
+  }

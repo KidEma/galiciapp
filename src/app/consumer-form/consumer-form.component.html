@@ -1,0 +1,25 @@
+<h2 class="mat-h2">Consumidores de créditos</h2>
+<h3 class="mat-h3">Consultar las probabilidades de que un cliente consuma un crédito</h3>
+<form name="projectForm" action="/" method="post">
+<div class="example-container">
+
+    <mat-form-field>
+      <input matInput placeholder="Nombre" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Código Postal" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Género" required>
+        <mat-option value="option">Femenino</mat-option>
+        <mat-option value="option">Masculino</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+</div>
+<div>
+  <button type="submit" mat-raised-button color="primary" (click)="consultarFactibilidad()">Consultar</button>
+</div>
+</form>

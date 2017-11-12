@@ -1,0 +1,27 @@
+.main-container{
+    vertical-align: top; /* here */
+}
+.mat-list-icon {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  .transacciones-lista{
+      text-align: left;
+  }
+ .fab-button-overlay{
+     position: fixed;
+     right: 10px;
+     bottom: 10px;
+ }
+ .consumer-list{
+    vertical-align: top; /* here */
+    
+   width: 48%;
+   display:inline-block;
+   
+ }
+ .consumer-list.positive {
+   background-color:#9FFA96;
+ }
+ .consumer-list.negative {
+    background-color:#FA9696;
+ }    

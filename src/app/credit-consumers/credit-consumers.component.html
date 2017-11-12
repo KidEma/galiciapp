@@ -1,0 +1,18 @@
+<h2 class="mat-h2">Consumidores de créditos</h2>
+<h3 class="mat-h3">Listado de clientes que consumieron préstamos y clientes que no consumieron préstamos</h3>
+<div *ngIf="showProgressBar">
+    <mat-progress-bar mode="buffer"></mat-progress-bar>
+    </div>
+    <div class="lists" *ngIf="!showProgressBar">
+<div class="consumer-list positive">
+<app-credit-consumer-list  [data]="consumers"></app-credit-consumer-list>
+</div>
+<div class="consumer-list negative" >
+    <app-credit-consumer-list [data]="nonConsumers"></app-credit-consumer-list>
+</div>  
+<div  matTooltip="Train!" matTooltipPosition="above" class="fab-button-overlay">
+<button mat-fab (click)="goToCreditconsumerForm()">
+    <mat-icon aria-label="Example icon-button with a heart icon">train</mat-icon>
+  </button>
+</div>
+</div>

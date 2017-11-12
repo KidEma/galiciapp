@@ -47,7 +47,8 @@ export class CreditConsumersComponent implements OnInit {
         zip: '123456',
         lat: 123456,
         lng: 3456,
-        gender: "false"
+        gender: "false",
+        loan: "0"
       }, {
         id: '001',
         firstName: 'juan domingo',
@@ -60,7 +61,9 @@ export class CreditConsumersComponent implements OnInit {
         zip: '123456',
         lat: 123456,
         lng: 3456,
-        gender: "false"
+        gender: "false",
+        loan: "0"
+        
       }, {
         id: '001',
         firstName: 'juan domingo',
@@ -73,7 +76,9 @@ export class CreditConsumersComponent implements OnInit {
         zip: '123456',
         lat: 123456,
         lng: 3456,
-        gender: "false"
+        gender: "false",
+        loan: "0"
+        
       },
 
     ];

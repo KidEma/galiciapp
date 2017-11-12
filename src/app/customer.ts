@@ -1,7 +1,7 @@
 export interface Customer {
     id: string;
-    first_name: string;
-    last_name: string;
+    first_Name: string;
+    last_Name: string;
     doc_number: string;
     street_number: string;
     street_name: string;

@@ -1,10 +1,10 @@
 export interface Customer {
     id: string;
-    firstName: string;
-    lastName: string;
-    docNumber: string;
-    streetNumber: string;
-    streetName: string;
+    first_name: string;
+    last_name: string;
+    doc_number: string;
+    street_number: string;
+    street_name: string;
     city: string;
     state: string;
     zip: string;
